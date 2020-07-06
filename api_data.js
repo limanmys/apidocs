@@ -410,6 +410,1137 @@ define({ "api": [
     "groupTitle": "General"
   },
   {
+    "type": "get",
+    "url": "/modules",
+    "title": "Get Modules List",
+    "name": "Get_Modules_List",
+    "group": "Module",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "modules",
+            "description": "<p>List of modules array.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Module/MainController.php",
+    "groupTitle": "Module"
+  },
+  {
+    "type": "post",
+    "url": "/ayar/bildirimKanali/ekle",
+    "title": "Add External Notification Channel",
+    "name": "Add_External_Notification_Channel",
+    "group": "Notification",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Name of The Token</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with randomly notification token.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/ExternalNotificationController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/ayar/bildirimKanali/duzenle",
+    "title": "Edit External Notification Channel",
+    "name": "Edit_External_Notification_Channel",
+    "group": "Notification",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID of the notification</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Name of the notification</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with randomly notification token.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/ExternalNotificationController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "get",
+    "url": "/bildirimlerSistem",
+    "title": "Get Admin Notifications",
+    "name": "Get_Admin_Notifications",
+    "group": "Notification",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "notifications",
+            "description": "<p>getNotifications</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/bildirimler",
+    "title": "Get New Notifications",
+    "name": "Get_New_Notifications",
+    "group": "Notification",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "user",
+            "description": "<p>User Notifications</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "admin",
+            "description": "<p>Admin Notifications</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "get",
+    "url": "/talep/{permission_id}",
+    "title": "Get Request",
+    "name": "Get_Request",
+    "group": "Notification",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "permission_id",
+            "description": "<p>ID of the permission</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with randomly notification token.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Permission/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "get",
+    "url": "/talepler",
+    "title": "Get System Requests",
+    "name": "Get_System_Requests",
+    "group": "Notification",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with randomly notification token.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Permission/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "get",
+    "url": "/bildirimler",
+    "title": "Get User Notifications",
+    "name": "Get_User_Notifications",
+    "group": "Notification",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "notifications",
+            "description": "<p>getNotifications</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/bildirim/adminOku",
+    "title": "Read All Admin Notifications",
+    "name": "Read_All_Admin_Notifications",
+    "group": "Notification",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/bildirimler/oku",
+    "title": "Read All Notifications",
+    "name": "Read_All_Notifications",
+    "group": "Notification",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/bildirim/oku",
+    "title": "Read Notification",
+    "name": "Read_Notification",
+    "group": "Notification",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "notification_id",
+            "description": "<p>ID of the notification</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "string",
+            "description": "<p>ID of the notification</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/ayar/bildirimKanali/sil",
+    "title": "Remove External Notification Channel",
+    "name": "Remove_External_Notification_Channel",
+    "group": "Notification",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID of the notification</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/ExternalNotificationController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/bildirim/sil",
+    "title": "Remove Notification",
+    "name": "Remove_Notification",
+    "group": "Notification",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "notification_id",
+            "description": "<p>ID of the notification</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/bildirim/okunanlar/sil",
+    "title": "Remove Read Notifications",
+    "name": "Remove_Read_Notifications",
+    "group": "Notification",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/ayar/bildirimKanali/yenile",
+    "title": "Renew External Notification Channel Token",
+    "name": "Renew_External_Notification_Channel_Token",
+    "group": "Notification",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID of the notification</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with randomly notification token.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Notification/ExternalNotificationController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/talep/guncelle",
+    "title": "Update System Request",
+    "name": "Update_System_Request",
+    "group": "Notification",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "request_id",
+            "description": "<p>ID of the request</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "status",
+            "description": "<p>1:In Progress, 2:Completed, 3:Deny, 4:Delete</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with randomly notification token.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Permission/MainController.php",
+    "groupTitle": "Notification"
+  },
+  {
+    "type": "post",
+    "url": "/rol/yetki_listesi/fonksiyon_ekle",
+    "title": "Add Function Permissions to Role",
+    "name": "Add_Function_Permissions_to_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role_id",
+            "description": "<p>ID of the Role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "functions",
+            "description": "<p>Name of the functions.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/ekle",
+    "title": "Add New Role",
+    "name": "Add_New_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Role Name</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/yetki_listesi/ekle",
+    "title": "Add Permission to Role",
+    "name": "Add_Permission_to_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "type",
+            "description": "<p>server, extension, liman.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role_id",
+            "description": "<p>ID of the Role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "ids",
+            "description": "<p>Ids of the type.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/rol_ekle",
+    "title": "Add Roles to User",
+    "name": "Add_Roles_to_User",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Id of the user.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "ids",
+            "description": "<p>Only ids of target roles.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/kullanici_ekle",
+    "title": "Add Users to Role",
+    "name": "Add_Users_to_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role_id",
+            "description": "<p>Id of the role</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "users",
+            "description": "<p>Only ids of target users.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/liste",
+    "title": "All Roles List",
+    "name": "All_Roles_List",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role",
+            "description": "<p>ID of the Role</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "value",
+            "description": "<p>Role List.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/yetki_listesi",
+    "title": "Get Permissions List for Role",
+    "name": "Get_Permissions_List_for_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "type",
+            "description": "<p>server, extension, liman.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "users",
+            "description": "<p>Only ids of target users.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "value",
+            "description": "<p>Results Array according to type.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "get",
+    "url": "/rol/{role}",
+    "title": "Get Role",
+    "name": "Get_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role",
+            "description": "<p>ID of the Role</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "role",
+            "description": "<p>Role details.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "servers",
+            "description": "<p>Role' Servers.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "extensions",
+            "description": "<p>Role' Extension.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "limanPermissions",
+            "description": "<p>Role' Liman Permissions.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/yetki_listesi/fonksiyon_sil",
+    "title": "Remove Function Permissions to Role",
+    "name": "Remove_Function_Permissions_to_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "functions",
+            "description": "<p>Object ids with , delimeter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/yetki_listesi/sil",
+    "title": "Remove Permission from Role",
+    "name": "Remove_Permission_from_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "type",
+            "description": "<p>server, extension, liman.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role_id",
+            "description": "<p>ID of the Role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "ids",
+            "description": "<p>Ids of the type.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/sil",
+    "title": "Remove Role",
+    "name": "Remove_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role_id",
+            "description": "<p>Id of the role</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/rol_sil",
+    "title": "Remove Roles from User",
+    "name": "Remove_Roles_from_User",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Id of the user.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "ids",
+            "description": "<p>Only ids of target roles.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/kullanici_sil",
+    "title": "Remove Users from Role",
+    "name": "Remove_Users_from_Role",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role_id",
+            "description": "<p>Id of the role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "users",
+            "description": "<p>Only ids of target users.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleController.php",
+    "groupTitle": "Role"
+  },
+  {
+    "type": "post",
+    "url": "/rol/eslestirme_ekle",
+    "title": "Add Role Mapping",
+    "name": "Add_Role_Mapping",
+    "group": "Role_Mapping",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "dn",
+            "description": "<p>DN to map with Role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role_id",
+            "description": "<p>Target Role Id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleMappingController.php",
+    "groupTitle": "Role_Mapping"
+  },
+  {
+    "type": "post",
+    "url": "/rol/eslestirme_sil",
+    "title": "Remove Role Mapping",
+    "name": "Remove_Role_Mapping",
+    "group": "Role_Mapping",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role_mapping_id",
+            "description": "<p>Target Role Mapping Id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message with status.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./app/Http/Controllers/Roles/RoleMappingController.php",
+    "groupTitle": "Role_Mapping"
+  },
+  {
     "type": "post",
     "url": "/lmn/private/reverseProxyRequest",
     "title": "Add Vnc Proxy Config",
